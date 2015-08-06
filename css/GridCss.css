@@ -1,0 +1,46 @@
+﻿.MyImageButton
+{
+    cursor:pointer
+}
+div.qsf_wrapper
+{
+    width: 1250px;
+}
+div.qsf_footer
+{
+    float: left;
+    width: 700px;
+}
+ 
+.editTable
+{
+    background-color: White;
+}
+ 
+.validateMessage
+{
+    padding: 1px 5px 2px;
+    background-color: Beige;
+}
+ 
+.RadGrid_Black .editTable,
+.RadForm_Office2010Black .validateMessage
+{
+    background-color: #333;
+}
+ 
+.RadGrid_Glow .editTable
+{
+       background-color: #404C54;
+}
+     
+.RadForm_Black .validateMessage,
+.RadForm_Glow .validateMessage,
+.RadGrid_Office2010Black .editTable
+{
+    background-color: #888;
+}
+.RadGrid_BlackMetroTouch .editTable
+{
+   background-color: #000;
+}

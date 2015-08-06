@@ -1,0 +1,157 @@
+﻿<%@ master language="C#" autoeventwireup="true" inherits="View_Master_LegatoMainMaster, App_Web_legatomainmaster.master.e1256b72" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    
+
+
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>
+    </title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <link href="~/css/GridCss.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body style="margin:0px">
+    <form id="MainMaster" runat="server" style="height:100%;  width :100%; position:absolute; top:0px; bottom:0px" >
+
+    <style type="text/css">
+    div.RadPanelBar .rpGroup .rpText {
+        text-align: left;
+        line-height:22px !important;
+        font-family:'Segoe UI';
+    }
+    container {
+      position: relative;
+      width: 1116px;
+      margin: 0 auto;
+      zoom: 1;
+    }
+
+    .MenuContainer {
+        height:38px;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+
+    .RadMenu {
+        float: none;
+        margin: 0 auto;
+        width:1400px;
+
+    }
+
+    .RadToolBar_Bootstrap .rtbOuter {
+        padding: 5px;
+        border-color: rgb(50,57,61);
+        background-color: rgb(50,57,61);
+    }
+
+
+
+ </style>
+    <asp:ScriptManager ID="Manager" runat="server" enablePageMethods="true"></asp:ScriptManager>   
+    <div id="container" style ="height:100%; margin: 0 auto;" >
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+            <div id="Content" style="height:calc(100%); margin: 0 auto">
+                <div id="TopBanner"  style="margin:0 auto; width:100%; height: 60px;" >   <%--메뉴 디비전--%>
+                    <div style="position: relative;  margin: 0 auto;  background-color:rgb(50,57,61);"><%--rgb(39,76,139)--%>
+                        <div style="margin: 0 auto;  width: 1400px; height:100%; display: table;  background-position-y:center; background-position-x:20px; background-image: url('/Images/main_logo.png');background-repeat:no-repeat;">
+                            <div style="height: 100%;line-height:60px; margin: 0 auto">
+                               <div style="float:right">
+                                   <telerik:RadToolBar runat="server" ID="TopToolbar" EnableRoundedCorners="true" BackColor="#32393d" ForeColor="#32393d">
+                                       <Items>
+                                          <telerik:RadToolBarButton ImageUrl="../../Images/Exclamation.png" Text="FAQ" NavigateUrl="../Page/ETC/FAQ.aspx" >
+                                          </telerik:RadToolBarButton>
+                                          <telerik:RadToolBarButton ImageUrl="../../Images/Question.png" Text="Q&A" NavigateUrl="../Page/ETC/QNA.aspx">
+                                          </telerik:RadToolBarButton>
+                                          <telerik:RadToolBarButton ImageUrl="../../Images/Notice.png" Text="공지사항" NavigateUrl="../Page/ETC/Notice.aspx">
+                                          </telerik:RadToolBarButton>
+                                       </Items>
+                                   </telerik:RadToolBar>
+                               </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+
+                <div style="background-color:rgb(37,160,218); Height:38px;" class="MenuContainer" >
+                        <telerik:RadMenu ID="RadMenu1" runat="server" ShowToggleHandle="true" Height="38px" Skin="MetroTouch" BackColor="#274c8b">
+                                    <Items>
+                                        <telerik:RadMenuItem Text="DashBoard" NavigateUrl="../Page/Dashboard/Dashboard.aspx">
+                                        </telerik:RadMenuItem>
+                                    </Items>  
+                                <Items>
+                                        <telerik:RadMenuItem Text="Resource">
+                                            <Items>
+                                                <telerik:RadMenuItem Text="VM Host" NavigateUrl="../Page/ResourceManage/VMHost.aspx"/>
+                                                <telerik:RadMenuItem Text="VM Template" NavigateUrl="../Page/ResourceManage/VMTemplete.aspx" />
+                                                <telerik:RadMenuItem Text="Storage" NavigateUrl="../Page/ResourceManage/Storage.aspx"/>
+                                                <telerik:RadMenuItem Text="IP Pool" NavigateUrl="../Page/ResourceManage/IPPool.aspx"/>
+                                            </Items>
+                                        </telerik:RadMenuItem>
+                                    </Items>  
+                                    <Items>
+                                        <telerik:RadMenuItem Text="Service Plan">
+                                            <Items>
+                                                <telerik:RadMenuItem Text="정책관리" NavigateUrl="../Page/ServicePlan/PolicyManage.aspx"/>
+                                                <telerik:RadMenuItem Text="서비스플랜" NavigateUrl="../Page/ServicePlan/ServicePlan.aspx"/>
+                                            </Items>
+                                        </telerik:RadMenuItem>
+                                    </Items>  
+                                     <Items>
+                                        <telerik:RadMenuItem Text="VM">
+                                            <Items>
+                                                <telerik:RadMenuItem Text="VM 목록" NavigateUrl="../Page/VM/VMCategory.aspx"/>
+                                               <%-- <telerik:RadMenuItem Text="VM 신청" NavigateUrl="../Page/VM/VMRequest.aspx"/>--%>
+                                                <telerik:RadMenuItem Text="VM 신청목록" NavigateUrl="../Page/VM/VMRequestCategory.aspx"/>
+                                                <telerik:RadMenuItem Text="VM 삭제목록" NavigateUrl="../Page/VM/VMDeletedCategory.aspx"/>
+                                            </Items>
+                                        </telerik:RadMenuItem>
+                                    </Items>  
+                                <Items>
+                                        <telerik:RadMenuItem Text="사용자">
+                                            <Items>
+                                                <telerik:RadMenuItem Text="관리자 관리" NavigateUrl="../Page/User/AdminManage.aspx"/>
+                                                <telerik:RadMenuItem Text="그룹/사용자 관리" NavigateUrl="../Page/User/GroupManage.aspx"/>
+                                            </Items>
+                                        </telerik:RadMenuItem>
+                                    </Items>  
+                                <Items>
+                                        <telerik:RadMenuItem Text="로그">
+                                            <Items>
+                                                <telerik:RadMenuItem Text="주요 Alert" NavigateUrl="../Page/Log/MainAlertLog.aspx"/>
+                                                <telerik:RadMenuItem Text="사용이력 조회" NavigateUrl="../Page/Log/UsedHistoryLog.aspx"/>
+                                            </Items>
+                                        </telerik:RadMenuItem>
+                                    </Items>  
+                                     
+                            </telerik:RadMenu>
+                </div>
+                    <div style="height:auto; width: 1400px; height:calc(100%-60px); margin:0 auto">
+                        <table style="height:100%; width:100%">
+                            <tr>
+                                <td valign="top" style="width: 100%;padding: 1px 11px; border: 0px solid #dfdfdf;" class="contentbody">
+                                    <div style="height:100%; margin: 0 auto;">
+                                        <asp:ContentPlaceHolder ID="Rightcontent" runat="server">
+                                            <p>
+                                                Content</p>
+                                        </asp:ContentPlaceHolder>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                </div>
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
