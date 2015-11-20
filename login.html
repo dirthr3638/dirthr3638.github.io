@@ -2,11 +2,73 @@
 <html>
 
 <head>
+<title>STACCA 로그인</title>
+
+<link href="css/animate.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="font-awesome/css/font-awesome.css" rel="stylesheet"> 
+
+<script src="js/jquery-2.1.1.js"  /></script>
+<script src="js/bootstrap.min.js" /></script>
+
 </head>
 
-<body>
-HelloWorld
+<body class="gray-bg" >
+     <div class="text-center animated fadeInDown">
+        <h1 class="logo-name" style="margin-top:0px; padding-top:40px; font-size: 15em;">STACCA</h1>
 
+    </div>
+    <div class="text-center loginscreen animated fadeInDown middle-box">
+
+        <div class="middle-box">            
+            <h3>Welcome to STACCA</h3>
+            <p>ST&Company 학원관리솔루션 STACCA입니다.
+            </p>
+            <p style="letter-spacing:-0.5px;">사용자 아이디와 패스워드를 올바르게 입력하시고 Login 버튼을 눌러주세요.</p>
+            <form class="m-t" role="form" action="index.html">
+                <div class="form-group">
+                    <input type="email" class="form-control" placeholder="사용자 ID" required="">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Password" required="">
+                </div>
+                <button type="submit" class="btn btn-primary block full-width m-b">Login</button>
+
+                <a href="#"><small>패스워드 찾기</small></a>
+                <p class="text-muted text-center" style="margin:10px 0 0"><small>회원가입 요청</small></p>
+	            <button type="button" class="btn btn-sm btn-white btn-block" data-toggle="modal" data-target="#myModal">
+	                	회원가입
+	            </button>
+	                        
+	        </form>
+            <p class="m-t"> <small>STACCA We App, Make By ST&COMPANY &copy; 2015</small> </p>
+        </div>
+    </div>
+    
+    <!--  회원가입 모달 다이얼로그 	 -->
+    <div class="modal inmodal" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
+           <div class="modal-dialog">
+           <div class="modal-content animated bounceInRight">
+                   <div class="modal-header">
+                       <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                       <i class="fa fa-check modal-icon"></i>
+                       
+                       <h4 class="modal-title">회원가입신청</h4>
+                   </div>
+                   <div class="modal-body">
+                       <p><strong>회원가입 링크를 받으실 이메일 주소를 입력하고 확인버튼을 클릭하여 주세요.</strong>
+                       	<br>신청을 완료 하시면 입력하신 메일로 회원가입 링크가 발송됩니다.
+                       </p>
+                               <div class="form-group text-center" style="padding-top:20px;"><label>입력란</label> 
+                               <input type="email" placeholder="Enter your email" class="form-control"></div>
+                   </div>
+                   <div class="modal-footer">
+                       <button type="button" class="btn btn-white" data-dismiss="modal">취소</button>
+                       <button type="button" class="btn btn-primary">확인</button>
+                   </div>
+               </div>
+           </div>
+     </div>
 </body>
-
 </html>
