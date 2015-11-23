@@ -40,10 +40,12 @@
 </head>
 <body>
 	<div id="wrapper">
+	
+		<!-- left Menu -->
 		 <nav class="navbar-default navbar-static-side" role="navigation" id="leftNav">
 			<div class="sidebar-collapse">
 		         <ul class="nav metismenu" id="side-menu">
-		             <li class="nav-header" style="background-color:red; margin:0px; ">
+		             <li class="nav-header" style="margin:0px; ">
 						<div class="dropdown profile-element" style="height:100%; width:100%; padding:0px; " />
 						    <img alt="image" src="img/STCompany.png" style="height:100%; width:100%;" />
 						</div>
@@ -79,6 +81,8 @@
 		   </div>
 		 </nav>
 	   
+	   
+	   
          <div id="page-wrapper" class="gray-bg dashbard-1" style="vertical-align:middle;">
 	        <div class="row border-bottom">
 		        <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
@@ -95,59 +99,7 @@
 		                <li>
 		                    <span class="m-r-sm topbanner-message">Welcome to STACA</span>
 		                </li>
-		                <li class="dropdown">
-		                    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
-		                        <i class="fa fa-envelope"></i>  <span class="label label-warning">16</span>
-		                    </a>
-		                    <ul class="dropdown-menu dropdown-messages">
-		                        <li>
-		                            <div class="dropdown-messages-box">
-		                                <a href="profile.html" class="pull-left">
-		                                    <img alt="image" class="img-circle" src="img/a7.jpg">
-		                                </a>
-		                                <div class="media-body">
-		                                    <small class="pull-right">46h ago</small>
-		                                    <strong>Mike Loreipsum</strong> started following <strong>Monica Smith</strong>. <br>
-		                                    <small class="text-muted">3 days ago at 7:58 pm - 10.06.2014</small>
-		                                </div>
-		                            </div>
-		                        </li>
-		                        <li class="divider"></li>
-		                        <li>
-		                            <div class="dropdown-messages-box">
-		                                <a href="profile.html" class="pull-left">
-		                                    <img alt="image" class="img-circle" src="img/a4.jpg">
-		                                </a>
-		                                <div class="media-body ">
-		                                    <small class="pull-right text-navy">5h ago</small>
-		                                    <strong>Chris Johnatan Overtunk</strong> started following <strong>Monica Smith</strong>. <br>
-		                                    <small class="text-muted">Yesterday 1:21 pm - 11.06.2014</small>
-		                                </div>
-		                            </div>
-		                        </li>
-		                        <li class="divider"></li>
-		                        <li>
-		                            <div class="dropdown-messages-box">
-		                                <a href="profile.html" class="pull-left">
-		                                    <img alt="image" class="img-circle" src="img/profile.jpg">
-		                                </a>
-		                                <div class="media-body ">
-		                                    <small class="pull-right">23h ago</small>
-		                                    <strong>Monica Smith</strong> love <strong>Kim Smith</strong>. <br>
-		                                    <small class="text-muted">2 days ago at 2:30 am - 11.06.2014</small>
-		                                </div>
-		                            </div>
-		                        </li>
-		                        <li class="divider"></li>
-		                        <li>
-		                            <div class="text-center link-block">
-		                                <a href="mailbox.html">
-		                                    <i class="fa fa-envelope"></i> <strong>Read All Messages</strong>
-		                                </a>
-		                            </div>
-		                        </li>
-		                    </ul>
-		                </li>
+
 		                <li class="dropdown">
 		                    <a class="dropdown-toggle count-info" data-toggle="dropdown" href="#">
 		                        <i class="fa fa-bell"></i>  <span class="label label-primary">8</span>
@@ -197,11 +149,6 @@
 		                        <i class="fa fa-sign-out"></i> Log out
 		                    </a>
 		                </li>
-		                <li>
-		                    <a class="right-sidebar-toggle">
-		                        <i class="fa fa-tasks"></i>
-		                    </a>
-		                </li>
 		            </ul>
 		
 		        </nav>
@@ -209,19 +156,17 @@
 			
 			<!-- subHeading -->
 			<div class="row wrapper border-bottom white-bg page-heading">
-				<div class="col-lg-10">
+				<div class="col-lg-12">
 					<h2>회원관리</h2>
 					<ol class="breadcrumb">
 						<li>
-							<a href="index.html">학원관리</a>
+							학원관리
 						</li>
 						<li class="active">
 							<strong>회원관리</strong>
+					
 						</li>
 					</ol>
-				</div>
-				<div class="col-lg-2">
-
 				</div>
 			</div>
 			
@@ -260,6 +205,7 @@
 							<th>학원</th>
 							<th>이름</th>
 							<th>아이디</th>
+
 						</tr>
 						</thead>
 						<tbody>
@@ -673,11 +619,11 @@
 						</tbody>
 						<tfoot>
 						<tr>
-							<th>Rendering engine</th>
-							<th>Browser</th>
-							<th>Platform(s)</th>
-							<th>Engine version</th>
-							<th>CSS grade</th>
+							<th>회원ID</th>
+							<th>본부</th>
+							<th>학원</th>
+							<th>이름</th>
+							<th>아이디</th>
 						</tr>
 						</tfoot>
 						</table>
@@ -689,7 +635,7 @@
             </div>
 				
 			</div>
-			
+					
 			
 			
 			<!-- footer -->
@@ -702,7 +648,6 @@
 				</div>
 			</div>
 			
-			
         </div>
 	
 	</div>
@@ -710,18 +655,27 @@
 
 	<!-- Page-Level Scripts -->
     <script>
+
+		
         $(document).ready(function() {
             $('.dataTables-example').DataTable({
                 "dom": '<"toolbar">fl<t>ip',
-				buttons: [
-					'colvis',
-					'excel',
-					'print'
-					]
-				});
-			$("div.toolbar").html('<b>Custom tool bar! Text/images etc.</b>');
-        });
 
+				});
+			$("div.toolbar").html(
+			'<b>본부명 : <select class="form-control" id="select1" > <option id="qhsq4n1" value="1234">어학본부</option><option value="12">수험학원 </select></b> \
+			 <b>학원명 : <select class="form-control" > <option>강남학원</option><option>부산학원</option><option>노량진학원</option> </select></b>'
+			);
+        });
+		
+		$(function(){
+			
+			$('#select1').on('change', function(){
+				alert($('#select1 option:selected').text());
+			}
+			);
+		
+		});
     </script>
 </body>
 </html>
